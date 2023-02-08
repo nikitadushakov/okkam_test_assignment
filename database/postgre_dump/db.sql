@@ -34,16 +34,3 @@ create view respondents_weight_agg as
         respondent
         , Sex
         , Age;
-
-create view respondents_weight_agg_view as
-    select
-        respondent
-        , Sex
-        , Age
-        , avg(weight) average_weight
-    from
-        respondents_weight
-    group by
-        respondent
-        , Sex
-        , Age;
