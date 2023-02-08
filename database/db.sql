@@ -1,13 +1,12 @@
--- drop view if exists respondents_weight_agg_view;
 drop table if exists respondents_weight;
 drop view if exists respondents_weight_agg;
 
 create table respondents_weight (
     idx int,
     Date date,
-    respondent int,
-    Sex int,
-    Age int,
+    respondent int2,
+    Sex int2,
+    Age int2,
     Weight float
 );
 
