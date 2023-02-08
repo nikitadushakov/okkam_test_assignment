@@ -1,0 +1,22 @@
+version: '3.8'
+
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - ./database/postgre_dump:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_USER=ndushakov
+      - POSTGRES_PASSWORD=1234567890
+      - POSTGRES_DB=okkam
+
+  web:
+    build: ./api
+    command: python -m core
+    ports:
+      - 80:80
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://ndushakov:1234567890@db:5432/okkam
+    depends_on:
+      - db
