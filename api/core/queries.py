@@ -8,9 +8,9 @@ from sqlmodel import (
 from core.models import Audiences, respondents_weight_agg, respondents_weight
 
 
-def query_aggregated_table(audiences: Audiences):
+def query_aggregated_table(audiences: Audiences) -> sqlmodel.sql.expression.SelectOfScalar:
     """
-    при отсутствии фильтрации по дате используем данные из таблицы с 
+    при отсутствии фильтрации по дате используем данные таблицы с 
     посчитанными средними весами респондентов
     """
     stmt = (
@@ -24,9 +24,10 @@ def query_aggregated_table(audiences: Audiences):
     )
     return stmt
 
+
 def query_main_table(audiences: Audiences) -> sqlmodel.sql.expression.SelectOfScalar:
     """
-    при наличии 
+    при наличии фильтрации по дате используем данные изначальной таблицы
     """
     subquery = (
         select(
@@ -38,8 +39,7 @@ def query_main_table(audiences: Audiences) -> sqlmodel.sql.expression.SelectOfSc
             text(audiences.audience1)
         )
         .group_by(
-            respondents_weight.respondent
-            , text(audiences.audience2)
+            respondents_weight.respondent, text(audiences.audience2)
         )
     ).subquery('t')
 
