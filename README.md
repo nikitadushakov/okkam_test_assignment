@@ -20,3 +20,9 @@
 │   └── db.sql
 └── docker-compose.yml
 ```
+
+## Запуск
+
+```bash
+docker compose up
+```
