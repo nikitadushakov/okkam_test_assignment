@@ -1,6 +1,6 @@
-drop view if exists df_agg_view;
-drop table if exists df_idx;
-drop table if exists df_agg;
+-- drop view if exists respondents_weight_agg_view;
+drop table if exists respondents_weight;
+drop view if exists respondents_weight_agg;
 
 create table respondents_weight (
     idx int,
@@ -22,7 +22,7 @@ copy respondents_weight (
 
 alter table respondents_weight drop idx;
 
-create table respondents_weight_agg as
+create view respondents_weight_agg as
     select
         respondent
         , Sex
