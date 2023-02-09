@@ -3,7 +3,7 @@
 ## Структура проекта
 
 ```
-├── Readme.md
+├── README.md
 ├── api
 │   ├── Dockerfile
 │   ├── core
@@ -14,7 +14,14 @@
 │   │   ├── endpoint.py
 │   │   ├── models.py
 │   │   └── queries.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── static
+│       ├── fonts
+│       │   ├── Menlo-Regular.ttf
+│       │   └── Montserrat-Regular.ttf
+│       ├── index.html
+│       ├── main.js
+│       └── style.css
 ├── database
 │   ├── OKKAM_Middle Python Developer_data.csv
 │   └── db.sql
@@ -24,7 +31,7 @@
 ## Запуск
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
 Сделал простой веб-интерфейс для проверки результата: http://0.0.0.0/form/
