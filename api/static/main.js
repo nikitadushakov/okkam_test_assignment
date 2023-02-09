@@ -10,6 +10,10 @@ const get_percent = async (audience_1, audience_2) => {
     return json['percent']
 }
 button.addEventListener("click", async (e) => {
+    if(!a1_input.value || !a2_input.value) {
+        result.innerHTML = 'no audiences values';
+        return
+    }
     let res = await get_percent(a1_input.value, a2_input.value); 
     result.innerHTML = res;
 });
