@@ -11,7 +11,7 @@ def _format_result(row_result: float | None) -> str:
     """
     Форматирование процента из числа в строку
     """
-    return "{res}%".format(res=round(100 * row_result, 2)) if row_result else "First audience is empty"
+    return "First audience is empty" if row_result is None else "{res}%".format(res=round(100 * row_result, 2))
 
 
 async def get_result(audiences: Audiences, session: AsyncSession) -> PercentResponse:
