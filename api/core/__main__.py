@@ -1,10 +1,12 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from core.endpoint import router
 
 import uvicorn
 
 app = FastAPI()
 
+app.mount('/form', StaticFiles(directory='./static', html=True), name='static')
 app.include_router(router)
 
 if __name__ == "__main__":

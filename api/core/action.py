@@ -7,11 +7,11 @@ from core.models import (
 from core.queries import query_aggregated_table, query_main_table
 
 
-def _format_result(row_result: float) -> str:
+def _format_result(row_result: float | None) -> str:
     """
     Форматирование процента из числа в строку
     """
-    return "{res}%".format(res=round(100 * row_result, 2))
+    return "{res}%".format(res=round(100 * row_result, 2)) if row_result else "First audience is empty"
 
 
 async def get_result(audiences: Audiences, session: AsyncSession) -> PercentResponse:
