@@ -1,5 +1,7 @@
 # Тестовое задание OKKAM
 
+[![CodeFactor](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment/badge)](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment)
+
 Имеется дамп базы data.csv со следующими полями:
 •	Date – дата в формате yyyymmdd
 •	respondent – уникальный номер респондента
