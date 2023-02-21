@@ -1,7 +1,11 @@
 # Тестовое задание OKKAM
 
-[![CodeFactor](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment/badge)](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment)
 
+<div align="center">
+[![CodeFactor](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment/badge)](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment)
+</div>
+
+```
 Имеется дамп базы data.csv со следующими полями:
 •	Date – дата в формате yyyymmdd
 •	respondent – уникальный номер респондента
@@ -37,6 +41,7 @@ b.	API слушает 80 порт
 a.	Позаботиться об отказоустойчивости
 b.	Позаботиться о быстродействии (учитывая, что данные не будут изменены ретроспективно)
 c.	Порядок в коде – pep8, докстринги, тайпинг, структура проекта
+```
 
 
 ## Структура проекта
