@@ -5,6 +5,8 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment/badge)](https://www.codefactor.io/repository/github/nikitadushakov/okkam_test_assignment)
 
 </div>
+
+
 ```
 Имеется дамп базы data.csv со следующими полями:
 •	Date – дата в формате yyyymmdd
